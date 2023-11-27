@@ -11,17 +11,19 @@ This project implements a simple server-client architecture to interact with a l
 - [Client Code](#ClientCode)
 - [Contributing](#Contributing)
 - [License](#License)
-##Overview
+
+#Overview
 This project utilizes a language model to generate responses to user queries. The ```server-script``` handles HTTP requests and uses the language model to generate responses, while the ```client-script``` interacts with the server to retrieve these responses.
 
-##Installation
+#Installation
 Requirements:
 
 Python 3.x
 Dependencies: ```ctransformers, langchain```
+
 Installation Steps:
 
-#Clone this repository.
+Clone this repository.
 Install dependencies:
 ```python
 pip install ctransformers langchain
@@ -53,7 +55,7 @@ port = 8000
 result = api_calls(url, Question, port)
 print(result)
 ```
-##ServerCode
+#ServerCode
 The serverScript.py file includes functionality to handle GET requests and generate model responses:
 
 ```python
@@ -65,17 +67,17 @@ response_data = {'response': f"{model_response}"}
 response = json.dumps(response_data).encode('utf-8')
 ```
 
-##ClientCode
+#ClientCode
 
 The clientScript.py file makes API calls to the server and handles responses:
 
 ```python
 response = requests.get(f"{url}:{port}?question={Question}")
 ```
-##Contributing
+#Contributing
 Contributions to this project are welcome! If you'd like to contribute, please open an issue or submit a pull request.
 
-##License
+#License
 This project is licensed under the MIT License.
 
 ##Follow 
